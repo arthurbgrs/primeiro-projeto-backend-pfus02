@@ -1,0 +1,23 @@
+{
+    "usuarios" : [
+        {
+            "id": 1,
+            "nome": "Gregorhi",
+            "email":"gregorhi2014@gmail.com",
+            "senha": "442"
+        },
+        {
+            "id": 2,
+            "nome": "grêgui",
+            "email":"gregui2001@gmail.com",
+            "senha": "997" 
+        },
+        {
+            "id": 3,
+            "nome": "pedrinho",
+            "email":"pedropequeno2001@gmail.com",
+            "senha": "827"
+        }
+
+    ]
+}
