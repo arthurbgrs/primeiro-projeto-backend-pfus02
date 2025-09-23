@@ -30,9 +30,53 @@ module.exports = {
   formCadastro: (req, res) => {
     res.render("cadastro");
   },
+  // Função para levar os dados preenchidos para o model realizar o cadastro
   salvarUsuario: (req, res) => {
     const {usuario,email,senha} = req.body
     userModel.salvar({usuario,email,senha})
     res.render("cadastroConfirmado")
   },
-};
+  // R
+  // Fumção para mostrar todos os usuarios
+  listarUsuarios: (req,res) => {
+    const usuarios = userModel.listarTodos()
+    res.json(usuarios)
+    //res.render("usuarios", { usuarios })
+  },
+  // função para mostrar apenas um usuario
+  buscarUsuario: (req,res) => {
+    // Busca o id vindo da url como parametro
+    const id = req.params.id
+    // Guarda o usuario retornado, depois de buscar pelo model
+    const usuario = userModel.buscarPorId(id)
+
+    // Se não achar, avisa que deu erro
+    if(!usuario){
+      return res.status(404).json({mensagem: "Usuario não encontrado"})
+    }
+
+    res.json(usuario)
+  },
+  atualizarUsuario: (req,res) => {
+    // Busca o id vindo da url como parametro
+    const id = req.params.id
+    // Busca as novas informações para atualizar
+    const { usuario,email,senha } = req.body
+
+    const usuarioAtualizado = userModel.atualizar(id, { usuario,email,senha })
+    if(!usuarioAtualizado){
+      return res.status(404).json({mensagem: "Usuario não encontrado"})
+    }
+    res.json({mensagem: "usuario encontrado"})
+  },
+  deletarUsuario: (req,res) => {
+    const id = req.params.id
+
+    const deletado = userModel.deletar(id)
+    if(!deletado){
+      return res.status(404).json({mensagem: "Usuario não encontrado"})
+    }
+    res.json({mensagem: "usuario deletado"})
+  },
+}
+  
