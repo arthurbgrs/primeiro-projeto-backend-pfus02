@@ -10,9 +10,21 @@ module.exports = {
   login: (usuario, senha) => {
     // busca na lista de usuarios, se tem aquele usuario com a informações que ele me passou
     let logado =
-      listaUsuarios.find((user) => {
-        user.email === usuario && user.senha === senha;
-      }) || null;
+      listaUsuarios.find((user) => 
+        user.email === usuario && user.senha === senha) || null;
     return logado;
   },
+  // CRUD
+  // Função para cadastrar um novo usuaio
+  salvar : ({usuario,email,senha}) => {
+    const novoUsuario = {
+      id: listaUsuarios.length + 1,
+      usuario,
+      email,
+      senha
+    }
+    listaUsuarios.push(novoUsuario)
+    console.log("Novo usuario salvo: ", novoUsuario);
+    return novoUsuario
+  }
 };

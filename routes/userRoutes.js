@@ -12,5 +12,17 @@ roteador.get("/login", userController.formLogin);
 // rota para enviar dados na pagina de login
 roteador.post("/login", userController.loginUsuario);
 
+// CRUD
+
+// C = CRIAR NVOVO USUARIO
+// Rota para solicitar a pagina de cadastro
+roteador.get("/cadastrar", userController.formCadastro)
+// Rota para envia dados de cadastro
+roteador.post("/cadastrar", userController.salvarUsuario)
+
+
+
+
+
 // criando a exportação desse arquivo
 module.exports = roteador;

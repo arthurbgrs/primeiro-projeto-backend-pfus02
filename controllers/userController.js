@@ -9,7 +9,7 @@ module.exports = {
   formLogin: (req, res) => {
     res.render("login");
   },
-   // função para levar os dados preenchidos para o model realizar o login 
+  // função para levar os dados preenchidos para o model realizar o login
   loginUsuario: (req, res) => {
     // cria um objeto com as informações do body, retirados dos inputs
     const { email, senha } = req.body;
@@ -17,11 +17,22 @@ module.exports = {
     const logado = userModel.login(email, senha);
     // se não conseguiu logar, manda uma mensagem de erro
     if (!logado) {
-        return res.status(401).json({mensagem: "Usuario ou senha invalidos"})
+      return res.status(401).json({ mensagem: "Usuario ou senha invalidos" });
     }
     // se conseguiu manda mensagem de confirmação
-    else{
-        res.json({mensagem: "login realizado"})
+    else {
+      res.json({ mensagem: "login realizado" });
     }
+  },
+
+  // CRUD
+  // Responde a requisição mostrando a visualização da tela de cadastro
+  formCadastro: (req, res) => {
+    res.render("cadastro");
+  },
+  salvarUsuario: (req, res) => {
+    const {usuario,email,senha} = req.body
+    userModel.salvar({usuario,email,senha})
+    res.render("cadastroConfirmado")
   },
 };
