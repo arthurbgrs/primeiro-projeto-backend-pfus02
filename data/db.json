@@ -19,5 +19,32 @@
             "senha": "827"
         }
 
+    ],
+    "produtos": [
+        {
+            "id": 5,
+            "nome" : "pó de cafe",
+            "descricao" : "produto utilizado para fazer café",
+            "preco" : "47,90",
+            "quantidade" : "450",
+            "categoria" : "comestivel"
+        },
+         {
+            "id": 6,
+            "nome" : "detergente",
+            "descricao" : "produto usado para lavar louça",
+            "preco" : "2,90",
+            "quantidade" : "234",
+            "categoria" : "limpeza"
+        },
+         {
+            "id": 7,
+            "nome" : "vassoura",
+            "descricao" : "produto usado para limpar ambientes",
+            "preco" : "59,90",
+            "quantidade" : "100",
+            "categoria" : "limpeza"
+        }
     ]
 }
+

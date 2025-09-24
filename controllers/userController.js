@@ -37,7 +37,7 @@ module.exports = {
     res.render("cadastroConfirmado")
   },
   // R
-  // Fumção para mostrar todos os usuarios
+  // Função para mostrar todos os usuarios
   listarUsuarios: (req,res) => {
     const usuarios = userModel.listarTodos()
     res.json(usuarios)

@@ -16,7 +16,7 @@ module.exports = {
     return logado;
   },
   // CRUD
-  // Função para cadastrar um novo usuaio
+  // Função para cadastrar um novo usuario
   salvar: ({ usuario, email, senha }) => {
     const novoUsuario = {
       id: listaUsuarios.length + 1,
