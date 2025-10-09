@@ -27,7 +27,7 @@
             "descricao" : "produto utilizado para fazer café",
             "preco" : "47,90",
             "quantidade" : "450",
-            "categoria" : "comestivel"
+            "categoria" : "alimento"
         },
          {
             "id": 6,

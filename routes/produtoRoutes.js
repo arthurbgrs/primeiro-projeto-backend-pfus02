@@ -4,9 +4,9 @@ const rotas = express.Router();
 
 const produtoController = require("../controllers/produtoController");
 
-rotas.get("/cadastroProdutos", produtoController.formCadastroProduto);
+rotas.get("/cadastrar", produtoController.formCadastroProduto);
 
-rotas.post("/cadastroProdutos", produtoController.salvarProduto);
+rotas.post("/cadastrar", produtoController.salvarProduto);
 
 rotas.get("/", produtoController.listarProdutos);
 

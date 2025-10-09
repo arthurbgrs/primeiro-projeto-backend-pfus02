@@ -1,35 +1,37 @@
-// importando do modulo express
-const express = require("express");
+//Importação do módulo express
+const express = require("express")
 
-// Criando uma variavel para gerenciar as rotas de usuario
-const roteador = express.Router();
+// Criando uma variável pra gerenciar as rotas de usuário
+const roteador = express.Router()
 
-// importando tudo que tem no arquivo de contraller do usuario
-const userController = require("../controllers/userController");
+// Importando tudo que tem no arquivo de controller do usuário
+const userController = require("../controllers/userController")
 
-// rota para solicitar a pagina de login
-roteador.get("/login", userController.formLogin);
-// rota para enviar dados na pagina de login
-roteador.post("/login", userController.loginUsuario);
+//LOGIN
+//Rota pra solicitar a página de login
+roteador.get("/login", userController.formLogin)
+//Rota pra enviar dados na página de login
+roteador.post("/login", userController.loginUsuario)
+
 
 // CRUD
-
-// C = CRIAR NVOVO USUARIO
-// Rota para solicitar a pagina de cadastro
+//C = CRIAR NOVO USUÁRIO
+//Rota pra solicitar a página de cadastro
 roteador.get("/cadastrar", userController.formCadastro)
-// Rota para envia dados de cadastro
+//Rota pra enviar dados de cadastro
 roteador.post("/cadastrar", userController.salvarUsuario)
 
-// R = OBTER INFORMAÇÕES DE USUARIOS
+//R = OBTER INFORMAÇÕES DE USUÁRIOS
+// Retorna as informações de todos os usuarios
 roteador.get("/", userController.listarUsuarios)
-// Retorna as informações de um usuario apenas
-roteador.get("/:id", userController.listarUsuarios)
+// Retorna as informações de um usuário apenas
+roteador.get("/:id", userController.buscarUsuario)
 
-// U = ATUALIZAR UM USUARIO
+// U = ATUALIZAR UM USUÁRIO
 roteador.put("/:id", userController.atualizarUsuario)
 
-// D = DELETAR USUARIO
+//D = DELETAR UM USUÁRIO
 roteador.delete("/:id", userController.deletarUsuario)
 
-// criando a exportação desse arquivo
-module.exports = roteador;
+// Criando a exportação desse arquivo
+module.exports = roteador

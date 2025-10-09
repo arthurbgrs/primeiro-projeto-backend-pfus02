@@ -1,0 +1,95 @@
+<!-- Cabecalho principal  -->
+<%- include('../partials/header') %>
+
+<!-- Conteudo do index  -->
+<main class="container d-flex flex-column flex-fill justify-content-center">
+  <h1 class="text-center">PÁGINA DE CADASTRO DE PRODUTOS</h1>
+
+  <!-- CRIANDO O FORMULÁRIO PARA ENVIO DAS INFORMAÇÕES  -->
+  <form action="/produtos/cadastrar" method="POST">
+    <div class="mb-3">
+      <!-- Caixinha de nome de usuário  -->
+      <label for="inputNome" class="form-label fs-2 mt-2">
+        Nome do produto
+      </label>
+      <input
+        type="text"
+        id="inputNome"
+        class="form-control form-control-lg"
+        placeholder="Digite o nome do produto"
+        name="usuario"
+        required
+      />
+      <!-- Fim de caixinha nome de usuário -->
+
+      <!-- Caixinha de email  -->
+      <label for="inputdescricao" class="form-label fs-2 mt-2">
+        Descrição
+      </label>
+      <input
+        type="text"
+        id="inputdescricao"
+        class="form-control form-control-lg"
+        placeholder="Digite a descricao"
+        name="descricao"
+        required
+      />
+      <!-- Fim de caixinha email -->
+
+      <!-- Caixinha de senha  -->
+      <div class="row">
+        <div class="col">
+          <label for="inputcategoria" class="form-label fs-2 mt-2">
+            categoria de produto
+          </label>
+          <select name="tipo" class="form-select form-select-lg mb-3">
+            <option value="alimento">Alimento</option>
+            <option value="Gerente">Limpeza</option>
+            <option value="Administrador">Eletrodomestico</option>
+          </select>
+
+      
+
+          <label for="inputpreco" class="form-label fs-2 mt-2"> Preço </label>
+          <input
+            type="number"
+            id="inputpreco"
+            class="form-control form-control-lg"
+            placeholder="Digite o preço produto"
+            name="produto"
+            required
+          />
+          <label for="inputpreco" class="form-label fs-2 mt-2"> Quantidade </label>
+          <input
+            type="number"
+            id="inputquantidade"
+            class="form-control form-control-lg"
+            placeholder="Digite a quantidade produto"
+            name="quantidade"
+            required
+          />
+        </div>
+
+        <div class="col">
+          <label for="inputimagem" class="form-label fs-2 mt-2">
+            Imagem do produto
+          </label>
+          <input
+            type="text"
+            id="inputdescricao"
+            class="form-control form-control-lg"
+            placeholder="Digite o link da imagem do produto"
+            name="descricao"
+            required
+          />
+          <img class="d-flex mx-auto mt-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMnJ3i8BARfyzD9fxQ9GvorEDF1gTrZqzrA&s" alt="">
+        </div>
+        
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
+    </div>
+  </form>
+</main>
+
+<!-- Rodape de todas as páginas  -->
+<%- include('../partials/footer') %>

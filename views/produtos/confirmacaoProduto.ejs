@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+
+<!-- Conteudo do index  -->
+<main class="d-flex flex-column flex-fill text-center justify-content-center">
+  <div
+    class="w-50 mx-auto align-content-center bg-success"
+    style="height: 300px"
+  >
+    <!-- Se a página que chamou for a de cadastro, mostra que o cadastro foi realizado, mostrando o nome do usuário que acabou de ser cadastrado -->
+    <% if (tipo == "cadastro") { %>
+    <h1 class="text-white">
+      <!-- Pega o nome de quem foi cadastrado, vindo do objeto usuarioNovo -->
+      Cadastro de <%- produtoNovo.produto %> realizado
+    </h1>
+    <!-- Se a página que chamou for a de edição, mostra que o usuário foi editado -->
+    <% } else if (tipo == "edicao") { %>
+    <h1 class="text-white">
+      <!-- Pega o nome de quem foi atualizado, vindo do objeto atualizado -->
+      Edição de <%- atualizado.produto %> confirmado
+    </h1>
+    <!-- Se a página que chamou for a de deletar usuário, mostra que o usuário foi excluído -->
+    <% } else { %>
+        <h1 class="text-white">
+        <!-- Pega o nome de quem foi deletado, vindo do objeto deletado -->
+        produto <%- deletado.produto %> excluído
+        </h1>
+    <% } %>
+
+    <!-- Criando botões para outras páginas -->
+    <a href="/produtos"> 
+        <button class="btn btn-lg btn-secondary mx-2">
+            Voltar para lista de produtos
+        </button>
+    </a>
+
+    <a href="/produtos/cadastrar">
+        <button class="btn btn-lg btn-primary mx-2">
+            Voltar para página de cadastro
+        </button>
+    </a>
+  </div>
+</main>
+
+<!-- Rodape de todas as páginas  -->
+<%- include('../partials/footer') %>

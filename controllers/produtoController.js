@@ -5,12 +5,16 @@ const produtoModel = require("../models/produtoModel");
 module.exports = {
 
 formCadastroProduto: (req, res) => {
-  res.render("cadastroProduto");
+  res.render("produtos/cadastroProdutos", {titulo: "cadastrio"});
 },
 salvarProduto: (req, res) => {
-  const { nome, descricao, preco, quantidade, categoria } = req.body;
-  produtoModel.salvar({ nome, descricao, preco, quantidade, categoria });
-  res.render("cadastroDeProdutoConfirmado");
+  const { produtos,nome, descricao, preco, quantidade, categoria } = req.body;
+  produtoNovo = produtoModel.salvar({ produtos,nome, descricao, preco, quantidade, categoria });
+  res.render("produtos/confirmacaoProduto", {
+    tipo: "cadastro",
+    titulo: "cadastro confirmado",
+    produtoNovo
+  });
 },
 listarProdutos: (req,res) => {
     const produtos = produtoModel.listarTodosProdutos()
