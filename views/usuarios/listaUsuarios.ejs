@@ -1,0 +1,84 @@
+<%- include('../partials/header') %>
+
+
+<main class="container text-center mt-3">
+<h1>
+   LISTA DE USUÁRIOS
+</h1>
+<!-- CRIANDO UM BOTÃO PARA PAGINA DE CADASTRO -->
+<a href="/usuarios/cadastrar">
+   <button class="btn btn-lg btn-primary">
+      <!-- ICONE DO BOOTSTRAP -->
+      <i class="bi bi-plus-circle"></i>
+      Cadastrar
+   </button>
+  </a>
+
+
+<!-- CRIANDO A TABELA DE ACORDO COM A LISTA DE USUARIOS -->
+<% if (usuarios && usuarios.length > 0) { %>
+   <!-- CRIANDO A TABELA -->
+    <table class="table table-striped table-hover align-middle mt-5">
+      <!-- CABEÇALHO DA TABELA -->
+       <thead class="table-dark">
+         <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col"> Usuario</th>
+            <th scope="col"> E-mail </th>
+            <th scope="col"> Tipo </th>
+            <th scope="col"> Ações </th>
+            
+         </tr>
+       </thead>
+       <!-- CORPO DA TABELA -->
+       <tbody>
+         <!--  USANDO A FUNÇÃO FOREACH PARA PERCORRER O ARRAY DE USUARIOS -->
+      <% usuarios.forEach((usuario) => { %>
+         <tr>
+            <td> <%= usuario.id %> </td>
+            <td> <%= usuario.usuario %> </td>
+            <td> <%= usuario.email %> </td>
+            <td> <%= usuario.tipo %> </td>
+            <td>
+               <!-- BOTÃO DE EDITAR -->
+               <a href="/usuarios/<%= usuario.id %>">
+                  <button class="btn btn-sm btn-warning me-2">
+                    <i class="bi bi-pencil-square"></i> Editar
+                  </button>
+               </a>
+
+               <!-- BOTÃO DE EXCLUIR -->
+                <a href="#">
+                  <button class="btn btn-sm btn-danger"
+                  onclick="confirmaExclusao('<%= usuario.usuario', '<%= usuario.id>')">
+                    <i class="bi bi-trash3"></i> Excluir
+                  </button>
+               </a>
+
+            </td>
+         </tr>
+       <% }); %>
+       </tbody>
+    </table>
+
+ 
+   <% } else { %>
+      <!-- MOSTRA UMA MENSAGEM, CASO NÃO TENHA NENHUM USUÁRIO CADASTRADO -->
+      <div class="alert alert-warning text-center mt-5">
+         Nenhum usuário cadastrado no momento.
+      </div>
+
+<% } %>
+<!-- CRIAÇÃO DO SCRIPT PARA FUNÇÃO DE DELETAR -->
+      <script>
+         function confirmaExclusao(nomeUsuario, id){
+            if(confirm(`deseja realmente excluir o usuário ${nomeUsuario}`)){
+               window.location.href = `/usuarios/deletar/${id}`
+            }
+         }
+      </script>
+
+</main>
+
+
+<%- include('../partials/footer') %>

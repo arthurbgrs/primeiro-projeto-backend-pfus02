@@ -26,6 +26,10 @@ app.set("view engine", "ejs");
 // definindo 'atalho' onde buscar as views
 app.set("views", path.join(__dirname, "views"));
 //página de home do site
+
+app.use(express.static('public'))
+
+
 app.get("/home", (req, res) => {
   res.status(200);
   res.render("index", { titulo: "página inicial" });
@@ -46,3 +50,4 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`Servidor funcionando em http://localhost:${port}`);
 });
+

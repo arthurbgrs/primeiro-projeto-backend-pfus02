@@ -53,16 +53,24 @@ module.exports = {
   // R
   // Função para mostrar todos os usuarios
   listarUsuarios: (req, res) => {
+
+    // Guarda a lista de usuarios, que o model mandou depois que buscou do banco
     const usuarios = userModel.listarTodos();
-    res.json(usuarios);
-    // res.render("usuarios", { usuarios });
+
+    console.log(usuarios);
+    
+    // Mostrar a tela da lista para a pessoa, mandando a variavel como parametro
+    res.render("usuarios/listaUsuarios", { usuarios, titulo:"Lista de usuários" });
   },
   // Função para mostrar apenas um usuario
   buscarUsuario: (req, res) => {
+
     // Busca o id vindo da url como parametro
     const id = req.params.id;
+
     // Guarda o usuário retornado, depois de buscar pelo model
     const usuario = userModel.buscarPorId(id);
+
     // Se não achar, avisa que deu erro
     if (!usuario) {
       return res.status(404).json({ mensagem: "Usuário não encontrado" });

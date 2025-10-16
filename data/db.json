@@ -2,21 +2,24 @@
     "usuarios" : [
         {
             "id": 1,
-            "nome": "Gregorhi",
+            "usuario": "Gregorhi",
             "email":"gregorhi2014@gmail.com",
-            "senha": "442"
+            "senha": "442",
+            "tipo": "administrador"
         },
         {
             "id": 2,
-            "nome": "grêgui",
+            "usuario": "grêgui",
             "email":"gregui2001@gmail.com",
-            "senha": "997" 
+            "senha": "997",
+            "tipo": "gerente"
         },
         {
             "id": 3,
-            "nome": "pedrinho",
+            "usuario": "pedrinho",
             "email":"pedropequeno2001@gmail.com",
-            "senha": "827"
+            "senha": "827",
+            "tipo": "administrador"
         }
 
     ],
