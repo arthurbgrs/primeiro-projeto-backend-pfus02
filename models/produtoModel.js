@@ -4,7 +4,7 @@ const { salvar, atualizar } = require("./userModel");
 let listaProdutos = db.produtos;
 
 module.exports = {
-  salvar: ({ nome, descricao, preco, quantidade, categoria }) => {
+  salvar: ({ nome, descricao, preco, quantidade, categoria, imagemUrl }) => {
     const novoProduto = {
       id: listaProdutos.length + 1,
       nome,
@@ -12,6 +12,7 @@ module.exports = {
       preco,
       quantidade,
       categoria,
+      imagemUrl
     };
     listaProdutos.push(novoProduto)
     console.log("novo produto salvo: ", novoProduto);

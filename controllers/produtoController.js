@@ -8,8 +8,8 @@ formCadastroProduto: (req, res) => {
   res.render("produtos/cadastroProdutos", {titulo: "cadastrio"});
 },
 salvarProduto: (req, res) => {
-  const { produtos,nome, descricao, preco, quantidade, categoria } = req.body;
-  produtoNovo = produtoModel.salvar({ produtos,nome, descricao, preco, quantidade, categoria });
+  const { produtos,nome, descricao, preco, quantidade, categoria, imagemUrl } = req.body;
+  produtoNovo = produtoModel.salvar({ produtos,nome, descricao, preco, quantidade, categoria, imagemUrl });
   res.render("produtos/confirmacaoProduto", {
     tipo: "cadastro",
     titulo: "cadastro confirmado",
@@ -18,7 +18,7 @@ salvarProduto: (req, res) => {
 },
 listarProdutos: (req,res) => {
     const produtos = produtoModel.listarTodosProdutos()
-    res.json(produtos)
+    res.render("produtos/listaProdutos", { produtos, titulo:"Lista de produtos" });
 },
  buscarProduto: (req,res) => {
     const id = req.params.id
