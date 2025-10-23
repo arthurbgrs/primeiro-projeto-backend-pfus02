@@ -12,8 +12,8 @@ rotas.get("/", produtoController.listarProdutos);
 
 rotas.get("/:id", produtoController.buscarProduto);
 
-rotas.put("/:id", produtoController.atualizarProduto);
+rotas.post("/:id", produtoController.atualizarProduto);
 
-rotas.delete("/:id", produtoController.deletarProduto);
+rotas.get("/:id", produtoController.deletarProduto);
 
 module.exports = rotas;

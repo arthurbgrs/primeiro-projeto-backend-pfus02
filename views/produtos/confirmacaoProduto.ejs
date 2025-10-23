@@ -10,19 +10,19 @@
     <% if (tipo == "cadastro") { %>
     <h1 class="text-white">
       <!-- Pega o nome de quem foi cadastrado, vindo do objeto usuarioNovo -->
-      Cadastro de <%- produtoNovo.produto %> realizado
+      Cadastro de <%- produtoNovo.nome %> realizado
     </h1>
     <!-- Se a página que chamou for a de edição, mostra que o usuário foi editado -->
     <% } else if (tipo == "edicao") { %>
     <h1 class="text-white">
       <!-- Pega o nome de quem foi atualizado, vindo do objeto atualizado -->
-      Edição de <%- atualizado.produto %> confirmado
+      Edição de <%- produtoAtualizado.nome %> confirmado
     </h1>
     <!-- Se a página que chamou for a de deletar usuário, mostra que o usuário foi excluído -->
     <% } else { %>
         <h1 class="text-white">
         <!-- Pega o nome de quem foi deletado, vindo do objeto deletado -->
-        produto <%- deletado.produto %> excluído
+        produto <%- deletado.nome %> excluído
         </h1>
     <% } %>
 

@@ -28,72 +28,72 @@
       "nome": "pó de cafe",
       "descricao": "produto utilizado para fazer café",
       "preco": "47,90",
-      "quantidade": "450",
+      "quantidade": "45",
       "categoria": "alimento",
-      "imagem": "https://cafeinacao.com.br/wp-content/uploads/2021/11/borra-de-cafe%CC%81.jpg"
+      "imagemUrl": "https://cafeinacao.com.br/wp-content/uploads/2021/11/borra-de-cafe%CC%81.jpg"
     },
     {
       "id": 6,
       "nome": "detergente",
       "descricao": "produto usado para lavar louça",
-      "preco": "2,90",
-      "quantidade": "234",
+      "preco": "2",
+      "quantidade": "74",
       "categoria": "limpeza",
-      "imagem": "https://cepel.vteximg.com.br/arquivos/ids/172603-410-410/colher.png?v=638895695667330000"
+      "imagemUrl": "https://cepel.vteximg.com.br/arquivos/ids/172603-410-410/colher.png?v=638895695667330000"
     },
     {
       "id": 7,
       "nome": "vassoura",
       "descricao": "produto usado para limpar ambientes",
       "preco": "59,90",
-      "quantidade": "100",
+      "quantidade": "69",
       "categoria": "limpeza",
-      "imagem": "https://phygital-files.mercafacil.com/catalogo/uploads/produto/vassoura_madri_condor_50e6b52c-276a-45e5-b843-9faf55229e8f.png"
+      "imagemUrl": "https://phygital-files.mercafacil.com/catalogo/uploads/produto/vassoura_madri_condor_50e6b52c-276a-45e5-b843-9faf55229e8f.png"
     },
     {
       "id": 8,
       "nome": "açúcar refinado",
       "descricao": "açúcar branco para uso culinário",
       "preco": 6.5,
-      "quantidade": 1000,
+      "quantidade": 50,
       "categoria": "alimento",
-      "imagem": "https://docemalu.vtexassets.com/arquivos/ids/5336081/115498-1.jpg?v=638421622462830000"
+      "imagemUrl": "https://docemalu.vtexassets.com/arquivos/ids/5336081/115498-1.jpg?v=638421622462830000"
     },
     {
       "id": 9,
       "nome": "leite integral",
       "descricao": "leite UHT integral de 1 litro",
       "preco": 5.2,
-      "quantidade": 1000,
+      "quantidade": 90,
       "categoria": "bebida",
-      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3tbulXUWKcljmWluYzhD2ng1E92scV4qrEw&s"
+      "imagemUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3tbulXUWKcljmWluYzhD2ng1E92scV4qrEw&s"
     },
     {
       "id": 10,
       "nome": "arroz agulhinha",
       "descricao": "arroz branco tipo 1, pacote de 5kg",
       "preco": 32.9,
-      "quantidade": 5000,
+      "quantidade": 45,
       "categoria": "alimento",
-       "imagem": "https://io.convertiez.com.br/m/trimais/shop/products/images/1449/medium/arroz-agulhinha-camil-tipo-1-1kg_1440.png"
+       "imagemUrl": "https://io.convertiez.com.br/m/trimais/shop/products/images/1449/medium/arroz-agulhinha-camil-tipo-1-1kg_1440.png"
     },
     {
       "id": 11,
       "nome": "sabão em pó",
       "descricao": "detergente em pó para roupas, fragrância floral",
       "preco": 24.75,
-      "quantidade": 2000,
+      "quantidade": 72,
       "categoria": "limpeza",
-       "imagem": "https://castronaves.vteximg.com.br/arquivos/ids/211647-1000-1000/12809_01.jpg?v=636957876403630000"
+       "imagemUrl": "https://castronaves.vteximg.com.br/arquivos/ids/211647-1000-1000/12809_01.jpg?v=636957876403630000"
     },
     {
     "id": 12,
     "nome": "biscoito recheado",
-    "descricao": "biscoito de chocolate com recheio de baunilha",
+    "descricao": "biscoito de chocolate com recheio de chocolate",
     "preco": 4.50,
-    "quantidade": 120,
+    "quantidade": 87,
     "categoria": "alimento",
-    "imagem": "https://decminasb2b.vtexassets.com/arquivos/ids/297645/215065.png?v=638671873876330000"
+    "imagemUrl": "https://decminasb2b.vtexassets.com/arquivos/ids/297645/215065.png?v=638671873876330000"
     }
   ]
 }

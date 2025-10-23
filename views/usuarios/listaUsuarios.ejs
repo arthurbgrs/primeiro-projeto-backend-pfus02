@@ -41,14 +41,14 @@
             <td> <%= usuario.tipo %> </td>
             <td>
                <!-- BOTÃO DE EDITAR -->
-               <a href="/usuarios/<%= usuario.id %>">
+               <a href="/usuarios/<%= usuario.id %>" style="text-decoration: none;">
                   <button class="btn btn-sm btn-warning me-2">
                     <i class="bi bi-pencil-square"></i> Editar
                   </button>
                </a>
 
                <!-- BOTÃO DE EXCLUIR -->
-                <a href="#">
+                <a href="#" style="text-decoration: none;">
                   <button class="btn btn-sm btn-danger"
                   onclick="confirmaExclusao('<%= usuario.usuario%>', '<%= usuario.id%>')">
                     <i class="bi bi-trash3"></i> Excluir

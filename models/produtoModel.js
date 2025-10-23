@@ -31,11 +31,11 @@ module.exports = {
     
     listaProdutos[index] = {
       ...listaProdutos[index],
-      listaProdutos: nome || listaProdutos[index].nome,
-      listaProdutos: descricao || listaProdutos[index].descricao,
-      listaProdutos: preco || listaProdutos[index].preco,
-      listaProdutos: quantidade || listaProdutos[index].quantidade,
-      listaProdutos: categoria || listaProdutos[index].categoria,
+     nome: nome || listaProdutos[index].nome,
+      descricao: descricao || listaProdutos[index].descricao,
+      preco: preco || listaProdutos[index].preco,
+      quantidade: quantidade || listaProdutos[index].quantidade,
+      categoria: categoria || listaProdutos[index].categoria,
     };
   
     return listaProdutos[index];
