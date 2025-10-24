@@ -6,7 +6,7 @@
   <h1 class="text-center">PÁGINA DE EDITAR USUÁRIOS</h1>
 
   <!-- CRIANDO O FORMULÁRIO PARA ENVIO DAS INFORMAÇÕES  -->
-  <form action="/usuarios/cadastrar" method="POST">
+  <form action="/usuarios/<%= usuario.id %>" method="POST">
     <div class="mb-3">
       <!-- Caixinha de nome de usuário  -->
       <label for="inputNome" class="form-label fs-2 mt-2">

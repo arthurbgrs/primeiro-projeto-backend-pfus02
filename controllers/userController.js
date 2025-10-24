@@ -122,9 +122,17 @@ module.exports = {
 
     // Se não achar, avisa que deu erro
     if (!deletado) {
-      return res.status(404).json({ mensagem: "Usuário não encontrado" });
+      return res.status(404).render("usuarios/erroUsuario",{
+        titulo:"erro",
+        mensagem: "Não foi possivel deletar"
+      }
+      )
     }
     // se atualizar, manda uma mensagem dizendo que deu certo
-    res.json({ deletado: deletado, mensagem: "Usuário foi deletado" });
+    res.render("usuarios/confirmacaoUsuario", {
+      titulo: "deletado",
+      tipo: "deletar",
+      deletado
+    })
   },
 };

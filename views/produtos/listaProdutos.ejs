@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <main class="container text-center mt-3">
-  <h1>LISTA DE USUÁRIOS</h1>
+  <h1>LISTA DE PRODUTOS</h1>
   <!-- CRIANDO UM BOTÃO PARA PAGINA DE CADASTRO -->
   <a href="/produtos/cadastrar">
     <button class="btn btn-lg btn-primary">
@@ -48,4 +48,11 @@
   <% }) %>
   <% } %>
   </div>
+   <script>
+         function confirmaExclusao(nomeProduto, id){
+            if(confirm(`deseja realmente excluir o produto ${nomeProduto}`)){
+               window.location.href = `/produtos/deletar/${id}`
+            }
+         }
+      </script>
 </main>

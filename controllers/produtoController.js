@@ -87,8 +87,15 @@ module.exports = {
 
     const deletados = produtoModel.deletar(id);
     if (!deletados) {
-      return res.status(404).json({ mensagem: "Usuario não encontrado" });
+      return res.status(404).render("usuarios/erroUsuario", {
+        titulo: "erro",
+        mensagem: "Não foi possivel deletar"
+      })
     }
-    res.json({ mensagem: "Produto deletado" });
+    res.render("produtos/confirmacaoProduto",{
+      titulo: "deletado",
+      tipo: "deletar",
+      deletados
+    })
   },
 };
